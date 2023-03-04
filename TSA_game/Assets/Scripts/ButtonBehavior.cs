@@ -16,7 +16,6 @@ public class ButtonBehavior : MonoBehaviour
         {
             hideCanvas[i].SetActive(false);
         }
-        
     }
     public void CanvasChangeButtonPress()
     {
