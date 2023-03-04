@@ -5,40 +5,28 @@ using UnityEngine;
 
 public class ButtonBehavior : MonoBehaviour
 {
-
     public GameObject menuCanvas;
-    public GameObject howToCanvas;
-    public GameObject locationsCanvas;
-    public GameObject playCanvas;
+    public GameObject currentCanvas;
+    public GameObject nextCanvas;
+    public GameObject[] hideCanvas;
     void Start()
     {
         menuCanvas.SetActive(true);
-        howToCanvas.SetActive(false);
-        locationsCanvas.SetActive(false);
+        for (int i = 0; i< hideCanvas.Length; i++)
+        {
+            hideCanvas[i].SetActive(false);
+        }
+        
     }
-    public void PlayButtonPress()
+    public void CanvasChangeButtonPress()
     {
-        menuCanvas.SetActive(false);
-        playCanvas.SetActive(true);
+        currentCanvas.SetActive(false);
+        nextCanvas.SetActive(true);
     }
-    public void HowToButtonPress()
-    {
-        menuCanvas.SetActive(false);
-        howToCanvas.SetActive(true);
-    }
-    public void LocationsButtonPress()
-    {
-        menuCanvas.SetActive(false);
-        locationsCanvas.SetActive(true);
-    }
+
+
     public void QuitButtonPress()
     {
         //Application.Quit;
-    }
-    public void backToMenu()
-    {
-        menuCanvas.SetActive(true);
-        howToCanvas.SetActive(false);
-        locationsCanvas.SetActive(false);
     }
 }

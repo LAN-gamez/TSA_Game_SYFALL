@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &89651364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ RectTransform:
   - {fileID: 430300287}
   - {fileID: 117135675}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -640,6 +640,7 @@ GameObject:
   - component: {fileID: 152102894}
   - component: {fileID: 152102893}
   - component: {fileID: 152102892}
+  - component: {fileID: 152102895}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -712,9 +713,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1615852386}
+      - m_Target: {fileID: 152102895}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: PlayButtonPress
+        m_MethodName: CanvasChangeButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -762,6 +763,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152102890}
   m_CullTransparentMesh: 1
+--- !u!114 &152102895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152102890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4230ddb34ca594fa4524a8ea43226d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 89651363}
+  currentCanvas: {fileID: 89651363}
+  nextCanvas: {fileID: 2057094885}
+  hideCanvas:
+  - {fileID: 1119599706}
+  - {fileID: 1308836584}
+  - {fileID: 2057094885}
 --- !u!1 &230316993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1192,7 @@ GameObject:
   - component: {fileID: 430300289}
   - component: {fileID: 430300288}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1950,6 +1970,7 @@ GameObject:
   - component: {fileID: 943199414}
   - component: {fileID: 943199413}
   - component: {fileID: 943199412}
+  - component: {fileID: 943199415}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2022,9 +2043,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1615852386}
+      - m_Target: {fileID: 943199415}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: backToMenu
+        m_MethodName: CanvasChangeButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2072,6 +2093,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943199410}
   m_CullTransparentMesh: 1
+--- !u!114 &943199415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943199410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4230ddb34ca594fa4524a8ea43226d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 89651363}
+  currentCanvas: {fileID: 1119599706}
+  nextCanvas: {fileID: 89651363}
+  hideCanvas:
+  - {fileID: 1119599706}
+  - {fileID: 1308836584}
+  - {fileID: 2057094885}
 --- !u!1 &951854274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1119599707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2665,7 +2705,7 @@ RectTransform:
   - {fileID: 883752921}
   - {fileID: 943199411}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3363,7 +3403,7 @@ RectTransform:
   - {fileID: 1398488485}
   - {fileID: 1715260835}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3461,8 +3501,9 @@ GameObject:
   - component: {fileID: 1420742294}
   - component: {fileID: 1420742293}
   - component: {fileID: 1420742292}
+  - component: {fileID: 1420742295}
   m_Layer: 5
-  m_Name: Locations
+  m_Name: LocationsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3533,9 +3574,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1615852386}
+      - m_Target: {fileID: 1420742295}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: LocationsButtonPress
+        m_MethodName: CanvasChangeButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3583,6 +3624,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420742290}
   m_CullTransparentMesh: 1
+--- !u!114 &1420742295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420742290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4230ddb34ca594fa4524a8ea43226d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 89651363}
+  currentCanvas: {fileID: 89651363}
+  nextCanvas: {fileID: 1308836584}
+  hideCanvas: []
 --- !u!1 &1449056460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3999,8 +4056,8 @@ RectTransform:
   m_Father: {fileID: 427938867}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.4710466}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: -251.1792}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4042,54 +4099,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545967820}
   m_CullTransparentMesh: 1
---- !u!1 &1615852385
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1615852387}
-  - component: {fileID: 1615852386}
-  m_Layer: 0
-  m_Name: ButtonBehavior
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1615852386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615852385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4230ddb34ca594fa4524a8ea43226d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuCanvas: {fileID: 89651363}
-  howToCanvas: {fileID: 1119599706}
-  locationsCanvas: {fileID: 1308836584}
-  playCanvas: {fileID: 2057094885}
---- !u!4 &1615852387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615852385}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 632.2513, y: 943.8805, z: -11.444391}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642315042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,6 +4179,7 @@ GameObject:
   - component: {fileID: 1715260838}
   - component: {fileID: 1715260837}
   - component: {fileID: 1715260836}
+  - component: {fileID: 1715260839}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -4242,9 +4252,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1615852386}
+      - m_Target: {fileID: 1715260839}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: backToMenu
+        m_MethodName: CanvasChangeButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4292,6 +4302,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715260834}
   m_CullTransparentMesh: 1
+--- !u!114 &1715260839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715260834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4230ddb34ca594fa4524a8ea43226d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 89651363}
+  currentCanvas: {fileID: 1308836584}
+  nextCanvas: {fileID: 89651363}
+  hideCanvas:
+  - {fileID: 1308836584}
+  - {fileID: 1119599706}
+  - {fileID: 2057094885}
 --- !u!1 &1796724008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4381,8 +4410,9 @@ GameObject:
   - component: {fileID: 1826660417}
   - component: {fileID: 1826660416}
   - component: {fileID: 1826660415}
+  - component: {fileID: 1826660418}
   m_Layer: 5
-  m_Name: HowToPlay
+  m_Name: HowToPlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4453,9 +4483,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1615852386}
+      - m_Target: {fileID: 1826660418}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: HowToButtonPress
+        m_MethodName: CanvasChangeButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4503,6 +4533,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826660413}
   m_CullTransparentMesh: 1
+--- !u!114 &1826660418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826660413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4230ddb34ca594fa4524a8ea43226d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 89651363}
+  currentCanvas: {fileID: 89651363}
+  nextCanvas: {fileID: 1119599706}
+  hideCanvas: []
 --- !u!1 &1900822714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,7 +5051,7 @@ RectTransform:
   - {fileID: 772241030}
   - {fileID: 1109146434}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5159,6 +5205,7 @@ GameObject:
   - component: {fileID: 2087073939}
   - component: {fileID: 2087073938}
   - component: {fileID: 2087073937}
+  - component: {fileID: 2087073940}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -5231,9 +5278,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1615852386}
+      - m_Target: {fileID: 2087073940}
         m_TargetAssemblyTypeName: ButtonBehavior, Assembly-CSharp
-        m_MethodName: backToMenu
+        m_MethodName: CanvasChangeButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5281,6 +5328,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087073935}
   m_CullTransparentMesh: 1
+--- !u!114 &2087073940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087073935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4230ddb34ca594fa4524a8ea43226d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 89651363}
+  currentCanvas: {fileID: 2057094885}
+  nextCanvas: {fileID: 89651363}
+  hideCanvas:
+  - {fileID: 2057094885}
+  - {fileID: 1308836584}
+  - {fileID: 1119599706}
 --- !u!1 &2117061823
 GameObject:
   m_ObjectHideFlags: 0
