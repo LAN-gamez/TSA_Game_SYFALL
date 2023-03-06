@@ -34,6 +34,6 @@ public class GameCreater : MonoBehaviour
     }
     public void chooseLocation()
     {
-
+        
     }
 }
